@@ -1,7 +1,7 @@
 .qodo
 LICENSE
-.env
-.env.*
+# .env
+# .env.*
 
 app.py_
 
@@ -11,7 +11,7 @@ app.py_
 # .github/workflows/coba.yml
 # .github/workflows/*
 
-Dockerfile
+# Dockerfile
 Dockerrun.aws.json
 
 modul2.yaml
