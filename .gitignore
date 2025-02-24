@@ -1,7 +1,7 @@
 .qodo
 LICENSE
-# .env
-# .env.*
+.env
+.env.*
 
 app.py_
 
