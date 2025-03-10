@@ -97,7 +97,7 @@ def update_user(user_id):
     response = requests.put(f"{API_URL}/{user_id}", json=data)
 
     if response.status_code == 200:
-        return jsonify({"message": "Used sudah diupdate", "data": response.json()})
+        return jsonify({"message": "User sudah diupdate", "data": response.json()})
     else:
         return jsonify({"error": "Failed to update user"}), response.status_code
 
