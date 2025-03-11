@@ -3,6 +3,8 @@ LICENSE
 
 app.py_
 
+.env
+
 # .github/workflows/deploy.yml_
 # .github/workflows/de.yml_
 # .github/workflows/tes.yml
