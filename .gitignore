@@ -5,7 +5,8 @@ app.py_
 
 .env
 
-./lambda/lambda
+/lambda/lambda/
+cicd.yml
 
 # .github/workflows/deploy.yml_
 # .github/workflows/de.yml_
