@@ -49,13 +49,6 @@ jobs:
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          echo "AWS_ACCESS_KEY_ID=ASIAYDZE4KWXARNVWOMB" >> .env
-          echo "AWS_SECRET_ACCESS_KEY=SF+3pDR11d93ehIhMM2FiaMBrUrWUM9yXGFL//Is" >> .env
-          echo "AWS_SESSION_TOKEN=IQoJb3JpZ2luX2VjEFMaCXVzLXdlc3QtMiJHMEUCIQCUqYmi7jCudHqXhxN9QMRZRGTStsIm5MqdcR1cjJRj4AIgCqgd5vGLBt3h7Gg6z1U6zx+MnzpnUkhSDLSetNgJOL0qqwIInP//////////ARAAGgw1NTc4ODYyMzE5ODIiDDLQIg2OeQdOmBhgxSr/AQQGnkLXlVp2i/lGlRonKl43hIWzU8AohlBwHybPSX2lKlfGNBFWnjoSVg/75bL6YhmDrDZ28hUQa0eo1OrK7d6NItUh/c97PZn+kSM+0XdF+Qso4MeHJHZRvTH9+0aUB591ccyi/1DqpDtrSO1TMGdBCiL6VFO95/mEIvk89Xtoh+4MfJsJO3Q4JzJ0YX2IG7pSlkGL0LPa86F/Z0BE/bAHkgi8qhDzTiQ28W6Y1utg1TTDs8hW0/FKBkP/1mm8rA/2nUsYnEKD2S1KOpe+I8VNYTz2A7hVGmOyIqp4d4k2JlZOs5rwUR4sZi0TH8DfhEisbmRfqFeKB/nwRlZFnzDdzL6+BjqdARn6GulARZr7E9ebkE2u6/S6OyiWOOGhzJZYBksa+I+vBM8ibXqnN6JBvH3iZUwUnyTFfZr74VsUt5ANiGQ4xqH/R+uH3AZYpqQHabYD9L5JIPEKp3ZT3JfxceZYkGydwk/91rTkU5kQ/MZPDb8GoQJnyv35yBmmFPg85fYkY2Q2eppS7yaaDiM9HW9YkZrb5gQOVfkEtfNgLjBIJCA=" >> .env
-          echo "AWS_REGION=us-east-1" >> .env
-          echo "EFS_PATH=/mnt/efs/log/app.log" >> .env
-          echo "S3_BUCKET_NAME=lks-kotamalang-hida-25 " >> .env
-          echo "API_GATEWAY_URL=https://x75728yi51.execute-api.us-east-1.amazonaws.com/production" >> .env
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
